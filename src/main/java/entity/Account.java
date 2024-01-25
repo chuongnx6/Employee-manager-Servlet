@@ -1,6 +1,5 @@
 package entity;
 
-import dto.AccountDto;
 import lombok.*;
 
 import javax.persistence.*;

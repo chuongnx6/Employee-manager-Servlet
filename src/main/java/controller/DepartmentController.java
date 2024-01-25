@@ -5,15 +5,10 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.reflect.TypeToken;
-import dto.AccountDto;
 import dto.DepartmentDto;
-import dto.EmployeeDto;
-import entity.Department;
 import payload.ResponseData;
-import payload.ResponseListData;
 import service.DepartmentService;
 import service.impl.DepartmentServiceImpl;
-import util.Constant;
 import util.GsonUtil;
 import util.PathUtil;
 
@@ -22,7 +17,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 

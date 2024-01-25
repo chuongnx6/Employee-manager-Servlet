@@ -1,13 +1,11 @@
 package util;
 
-import java.io.IOException;
-import java.io.PrintWriter;
+import com.google.gson.Gson;
+import payload.ResponseData;
 
 import javax.servlet.http.HttpServletResponse;
-
-import com.google.gson.Gson;
-
-import payload.ResponseData;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class GsonUtil {
 	private static Gson gson = new Gson();

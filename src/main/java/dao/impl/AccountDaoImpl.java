@@ -2,7 +2,6 @@ package dao.impl;
 
 import dao.AccountDao;
 import entity.Account;
-import org.hibernate.Hibernate;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

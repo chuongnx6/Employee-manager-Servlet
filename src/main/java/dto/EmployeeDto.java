@@ -1,8 +1,6 @@
 package dto;
 
 import com.google.gson.annotations.JsonAdapter;
-import dao.impl.DepartmentDaoImpl;
-import entity.Department;
 import entity.Employee;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

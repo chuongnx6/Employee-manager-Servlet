@@ -1,13 +1,11 @@
 package dto;
 
 import com.google.gson.annotations.JsonAdapter;
-import dao.impl.AccountDaoImpl;
-import dao.impl.DepartmentDaoImpl;
-import entity.Account;
-import entity.Department;
 import entity.Employee;
-import entity.enumeration.Gender;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import util.GsonLocalDateAdapter;
 
 import java.time.LocalDate;

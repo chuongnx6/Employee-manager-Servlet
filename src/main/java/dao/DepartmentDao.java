@@ -1,6 +1,5 @@
 package dao;
 
-import entity.Account;
 import entity.Department;
 
 public interface DepartmentDao extends EntityDao<Department, Integer> {

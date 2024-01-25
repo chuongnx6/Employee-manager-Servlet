@@ -1,7 +1,6 @@
 package entity;
 
 import com.google.gson.annotations.JsonAdapter;
-import dto.EmployeeDto;
 import entity.enumeration.Gender;
 import lombok.*;
 import util.GsonLocalDateAdapter;
