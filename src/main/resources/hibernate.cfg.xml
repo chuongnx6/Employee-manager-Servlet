@@ -7,10 +7,10 @@
         <!-- SQL dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
 
-        <!-- Database connection settings -->
+        <!-- SampleData connection settings -->
         <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
         <property name="hibernate.connection.url">
-            jdbc:sqlserver://localhost:1433;databaseName=training_manage;encrypt=true;trustServerCertificate=true
+            jdbc:sqlserver://localhost:1433;databaseName=jwd_hrm;encrypt=true;trustServerCertificate=true
         </property>
         <property name="hibernate.connection.username">sa</property>
         <property name="hibernate.connection.password">Chuong@666</property>
