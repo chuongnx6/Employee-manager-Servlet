@@ -1,5 +1,6 @@
 package dto;
 
+import entity.Account;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,9 +10,15 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AccountAuthenticationDto {
+public class AccountDto {
     private int id;
-    private String userName;
     private String email;
+    private String userName;
     private String password;
+
+    public AccountDto(Account account) {
+        id = account.getId();
+        email = account.getEmail();
+        userName = account.getUserName();
+    }
 }

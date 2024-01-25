@@ -16,7 +16,7 @@ import java.time.LocalDate;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class EmployeeFullDto {
+public class EmployeeFormDto {
     private int id;
     private String firstName;
     private String lastName;
@@ -28,10 +28,8 @@ public class EmployeeFullDto {
     private String remark;
     private int departmentId;
     private int accountId;
-//    @Setter(AccessLevel.NONE)
-//    private String departmentName;
 
-    public EmployeeFullDto(Employee employee) {
+    public EmployeeFormDto(Employee employee) {
         id = employee.getId();
         firstName = employee.getFirstName();
         lastName = employee.getLastName();
@@ -42,27 +40,5 @@ public class EmployeeFullDto {
         remark = employee.getRemark();
         departmentId = employee.getDepartment().getId();
         accountId = employee.getAccount().getId();
-//        departmentName = employee.getDepartment().getName();
     }
-
-    public Employee loadFromDto(EmployeeFullDto dto) {
-        Department department = new DepartmentDaoImpl().getById(dto.getDepartmentId());
-        Account account = new AccountDaoImpl().getById(dto.getAccountId());
-        return Employee.builder()
-                .id(dto.getId())
-                .firstName(dto.getFirstName())
-                .lastName(dto.getLastName())
-                .dateOfBirth(dto.getDateOfBirth())
-                .phone(dto.getPhone())
-                .gender(Gender.valueOf(dto.getGender().toUpperCase()))
-                .address(dto.getAddress())
-                .remark(dto.getRemark())
-                .department(department)
-                .account(account)
-                .build();
-    }
-
-//    public String getDepartmentName() {
-//        return new DepartmentDaoImpl().getById(departmentId).getName();
-//    }
 }

@@ -1,5 +1,7 @@
-package fa.training.entity.enumeration;
+package entity.enumeration;
 
 public enum Gender {
-    FEMALE, MALE
+    MALE,
+    FEMALE,
+    OTHER
 }
