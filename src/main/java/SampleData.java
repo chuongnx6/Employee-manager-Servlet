@@ -13,7 +13,7 @@ import util.EncryptionUtil;
 import java.time.LocalDate;
 import java.util.Random;
 
-public class Database {
+public class SampleData {
     private static AccountDao accountDao = new AccountDaoImpl();
     private static DepartmentDao departmentDao = new DepartmentDaoImpl();
     private static EmployeeDao employeeDao = new EmployeeDaoImpl();
@@ -26,7 +26,7 @@ public class Database {
             "Khanson", "Lopezon", "Millerson", "Nguyenson", "Owenson", "Perezson", "Quinnson", "Reyesson", "Smithson", "Thomason"
     };
     private static String[] addresses = {
-            "123 Database Street, Suite 567, Cityville, State, 12345",
+            "123 SampleData Street, Suite 567, Cityville, State, 12345",
             "456 Elm Street, Apt 203, Townsville, State, 67890",
             "789 Oak Avenue, Unit 45, Villageton, State, 34567",
             "101 Pine Street, Building 12, Hamletown, State, 89012",

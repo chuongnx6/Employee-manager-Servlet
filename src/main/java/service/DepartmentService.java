@@ -1,9 +1,8 @@
 package service;
 
 import dto.AccountDto;
-import entity.Account;
+import dto.DepartmentDto;
+import entity.Department;
 
-public interface AccountService extends EntityService<AccountDto, Integer> {
-    AccountDto create(AccountDto account);
-    AccountDto getById(Integer id);
+public interface DepartmentService extends EntityService<DepartmentDto, Integer> {
 }

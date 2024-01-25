@@ -1,8 +1,8 @@
-package fa.training.util;
+package util;
 
-import fa.training.entity.Candidate;
-import fa.training.entity.EntryTest;
-import fa.training.entity.Interview;
+import entity.Account;
+import entity.Department;
+import entity.Employee;
 import lombok.Getter;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -23,12 +23,13 @@ public class HibernateUtil {
         prop.put(Environment.SHOW_SQL, "true");
         prop.put(Environment.FORMAT_SQL, "true");
         prop.put(Environment.HBM2DDL_AUTO, "update");
+        prop.put(Environment.USE_LEGACY_LIMIT_HANDLERS,"true");
 
         cfg.setProperties(prop);
 
-        cfg.addAnnotatedClass(Candidate.class);
-        cfg.addAnnotatedClass(Interview.class);
-        cfg.addAnnotatedClass(EntryTest.class);
+        cfg.addAnnotatedClass(Account.class);
+        cfg.addAnnotatedClass(Department.class);
+        cfg.addAnnotatedClass(Employee.class);
 
         sessionFactory = cfg.buildSessionFactory();
     }

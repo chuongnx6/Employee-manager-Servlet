@@ -1,5 +1,7 @@
 package service;
 
+import dto.AccountDto;
+
 public interface LoginService {
-    boolean checkLogin(String userName, String password);
+    AccountDto checkLogin(String userName, String password);
 }

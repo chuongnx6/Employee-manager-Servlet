@@ -1,10 +1,13 @@
 package dao;
 
-import entity.Employee;
+import entity.Account;
 
-public interface EmployeeDao extends EntityDao<Employee, Integer> {
+public interface AccountDao extends EntityDao<Account, Integer> {
     @Override
-    default Class<Employee> getEntityClass() {
-        return Employee.class;
+    default Class<Account> getEntityClass() {
+        return Account.class;
     }
+
+    Account getByUserName(String userName);
+    Account getByEmail(String email);
 }

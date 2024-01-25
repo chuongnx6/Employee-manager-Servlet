@@ -1,10 +1,10 @@
-package fa.training.dao;
+package dao;
 
-import fa.training.util.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+import util.HibernateUtil;
 
 import java.io.Serializable;
 import java.util.List;

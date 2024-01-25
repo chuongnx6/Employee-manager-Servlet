@@ -1,42 +1,48 @@
 package service.impl;
 
-import dao.AccountDao;
-import dao.impl.AccountDaoImpl;
-import dto.AccountDto;
-import entity.Account;
-import service.AccountService;
-import util.EncryptionUtil;
+import dao.DepartmentDao;
+import dao.impl.DepartmentDaoImpl;
+import dto.DepartmentDto;
+import entity.Department;
+import service.DepartmentService;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class AccountServiceImpl implements AccountService {
-    private AccountDao accountDao = new AccountDaoImpl();
+public class DepartmentServiceImpl implements DepartmentService {
+    private DepartmentDao departmentDao = new DepartmentDaoImpl();
+
     @Override
-    public AccountDto create(AccountDto accountDto) {
-        Account account = new Account();
-        account.setPassword(EncryptionUtil.encrypt(account.getPassword()));
-        return new AccountDto(accountDao.create(account));
+    public DepartmentDto create(DepartmentDto departmentDto) {
+        Department department = dtoToEntity(departmentDto);
+        return new DepartmentDto(departmentDao.create(department));
     }
 
     @Override
-    public AccountDto getById(Integer id) {
-        return new AccountDto(accountDao.getById(id));
+    public DepartmentDto getById(Integer id) {
+        return new DepartmentDto(departmentDao.getById(id));
     }
 
     @Override
-    public List<AccountDto> getAll() {
-        return accountDao.getAll().stream().map(AccountDto::new).collect(Collectors.toList());
+    public List<DepartmentDto> getAll() {
+        return departmentDao.getAll().stream().map(DepartmentDto::new).collect(Collectors.toList());
     }
 
     @Override
-    public boolean update(AccountDto accountDto) {
-        Account account = new Account();
-        return accountDao.update(account);
+    public boolean update(DepartmentDto departmentDto) {
+        Department department = dtoToEntity(departmentDto);
+        return departmentDao.update(department);
     }
 
     @Override
     public boolean deleteById(Integer id) {
-        return accountDao.deleteById(id);
+        return departmentDao.deleteById(id);
+    }
+
+    private Department dtoToEntity(DepartmentDto dto) {
+        return Department.builder()
+                .id(dto.getId())
+                .name(dto.getName())
+                .build();
     }
 }

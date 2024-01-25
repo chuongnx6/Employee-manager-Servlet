@@ -1,13 +1,13 @@
 package dao;
 
 import entity.Account;
+import entity.Department;
 
-public interface AccountDao extends EntityDao<Account, Integer> {
+public interface DepartmentDao extends EntityDao<Department, Integer> {
     @Override
-    default Class<Account> getEntityClass() {
-        return Account.class;
+    default Class<Department> getEntityClass() {
+        return Department.class;
     }
 
-    Account getByUserName(String userName);
-    Account getByEmail(String email);
+    Department getByName(String userName);
 }
