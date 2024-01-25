@@ -1,10 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="">
+    <h2 id="employeeInfoTitle">Add Employee</h2>
+    <form action="employee/add" method="post" id="employeeInfo" class="grid my-0 g-3" novalidate>
+        <div class="input-group has-validation d-none" style="grid-column: span 2;">
+            <div class="form-floating flex-fill">
+                <input type="text" class="form-control" id="employeeId" name="id" placeholder readonly value="0">
+                <label class="text-secondary">Employee id</label>
+            </div>
+        </div>
+        <div class="input-group has-validation">
+            <div class="form-floating flex-fill">
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder
+                       required>
+                <label class="text-secondary required">First name</label>
+            </div>
+        </div>
+        <div class="input-group has-validation">
+            <div class="form-floating flex-fill">
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder
+                       required>
+                <label class="text-secondary required">Last name</label>
+            </div>
+        </div>
+        <div class="input-group has-validation">
+            <div class="form-floating flex-fill">
+                <input type="text" class="form-control" id="phoneNumber" name="phone" placeholder
+                       required>
+                <label class="text-secondary required">Phone number</label>
+            </div>
+        </div>
+        <div class="input-group has-validation">
+            <div class="form-floating flex-fill">
+                <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" placeholder
+                       required>
+                <label class="text-secondary required">Date of birth</label>
+            </div>
+        </div>
+        <div class="ms-2">
+            <label for="male" class="form-label required">Gender</label><br/>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="MALE" checked>
+                <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="FEMALE">
+                <label class="form-check-label" for="female">Female</label>
+            </div>
+        </div>
+        <div class="input-group has-validation">
+            <div class="form-floating flex-fill">
+                <select class="form-select" id="department" name="departmentId">
+
+                </select>
+                <label class="text-secondary required">Department</label>
+            </div>
+        </div>
+        <div class="input-group has-validation">
+            <div class="form-floating flex-fill">
+                <textarea class="form-control" id="address" name="address" placeholder rows="3"></textarea>
+                <label class="text-secondary">Address</label>
+            </div>
+        </div>
+        <div class="input-group has-validation">
+            <div class="form-floating flex-fill">
+                <textarea class="form-control" id="remark" name="remark" placeholder rows="3"></textarea>
+                <label class="text-secondary">Remark</label>
+            </div>
+        </div>
+
+        <div class="d-grid d-md-block">
+            <button class="btn btn-primary" type="button" id="backToEmployeeList"><i class="fa-solid fa-backward"></i><span class="ms-2">Back</span></button>
+            <button class="btn btn-warning" type="reset"><i class="fa-solid fa-rotate-left"></i><span class="ms-2">Reset</span></button>
+            <button class="btn btn-success" type="submit"><i class="fa-solid fa-plus"></i><span class="ms-2">Add</span></button>
+        </div>
+    </form>
+</div>

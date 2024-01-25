@@ -1,0 +1,74 @@
+<div class="d-flex flex-column justify-content-between h-100">
+    <h2 class="mb-0">Employee list</h2>
+    <div class="d-flex justify-content-end">
+        <div id="searchForm" action="employee/list" method="get" class="row g-3 my-0">
+            <input type="hidden" name="pageNumber" value="1">
+            <div class="col-auto my-0">
+                <div class="input-group">
+                    <label for="searchInput" class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></label>
+                    <input type="text" class="form-control" id="searchInput" name="search" placeholder="Search">
+                </div>
+            </div>
+            <div class="col-auto my-0">
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="searchFilter"><i class="fa-solid fa-filter"></i><span
+                            class="ms-2">Filter by</span></label>
+                    <select class="form-select" id="searchFilter">
+                        <option value="name" selected>Name</option>
+                        <option value="address">Address</option>
+                        <option value="phone">Phone</option>
+                        <option value="department">Department</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-auto my-0">
+                <button id="searchButton" class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </div>
+    </div>
+    <table id="employeeTable" class="table table-bordered table-hover mb-auto">
+        <thead>
+            <tr>
+                <th scope="col" class="text-center">#</th>
+                <th scope="col" class="text-center">Name</th>
+                <th scope="col" class="text-center">Date of birth</th>
+                <th scope="col" class="text-center">Address</th>
+                <th scope="col" class="text-center">Phone number</th>
+                <th scope="col" class="text-center">Department</th>
+                <th scope="col" class="text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+        </tbody>
+    </table>
+    <div id="tableInfoContainer" class="d-flex justify-content-between align-items-center mt-3">
+        <nav id="pagination">
+            <ul id="paginationContainer" class="pagination my-0">
+                <li class="page-item"><button class="page-link">Previous</button></li>
+                <li class="page-item"><button class="page-link">1</button></li>
+                <li id="currentPage" hidden>1</li>
+                <li class="page-item"><button class="page-link">Next</button></li>
+            </ul>
+        </nav>
+        <div>
+            <label for="pageSize">Rows per page:</label>
+            <select id="pageSize" class="mx-1">
+                <option value="5">5</option>
+                <option value="10" selected>10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+            <span id="tableInfo" class="ms-2">1-20 of 100</span>
+        </div>
+    </div>
+</div>
